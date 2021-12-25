@@ -1,0 +1,76 @@
+{
+    "name": "computer",
+    "commands": {
+        "say": {
+            "priority":2
+        }, 
+        "play": {
+            "priority":1
+        },
+        "screenshot": {
+            "priority":2,
+            "screenshot_folder": "storage/screenshots",
+            "screnshot_taken_response": "Screenshot taken",
+            "screenshot_folder_doesnt_exist_response": "The screenshots folder is not available"
+        },
+        "google": {
+            "priority": 3,
+            "after_google_response": "here you go!"
+        },
+        "safe": {
+            "priority": 4,
+            "save_response": "saved"
+        },
+        "open": {
+            "priority": 5,
+            "element_not_found_responses": ["I dont know what that is, sorry"],
+            "open_list": [
+                {
+                    "name": ["heroes"],
+                    "path": "C:\\Program Files (x86)\\Heroes of the Storm\\Heroes of the Storm.exe",
+                    "additional_params": ["-new-tab"]
+                },
+                {
+                    "name": ["cut"],
+                    "path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Snipping Tool.lnk",
+                    "additional_params": []
+                }
+            ]
+        },
+        "enter": {
+            "priority": 6,
+            "open_up_responses": ["tell me"],
+            "confirmation_responses": ["Do i enter?"],
+            "languages": {
+                "spanish": "es-ES",
+                "english": "en-US"
+            },
+            "default_language": "english"
+        }
+    },
+    "attention_responses": [
+        "I am here.",
+        "Yes?",
+        "I am listening",
+        "What do you want?",
+        "Hey",
+        "What is it?"
+    ],
+    "repeat_command_responses": [
+        "Can you repeat please", 
+        "What did you say?",
+        "try again please"
+    ],
+    "escape_repetition_commands": [
+        "nothing",
+        "stop"
+    ],
+    "escape_repetition_commands_responses": [
+        "ok"
+    ],
+    "command_not_found_responses": [
+        "I do not know the answer to that"
+    ],
+    "repeat_command_tries": 2,
+    "general_command_timeout": 4
+}
